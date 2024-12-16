@@ -1,0 +1,7 @@
+<mvc:View controllerName="eadcopacol.controller.admissao.eletronica"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:m="sap.m">
+    <m:Page id="admissaoPage" title="Admissão Eletrônica" backgroundDesign="Solid">
+        <m:Label text="Bem-vindo à Admissão Eletrônica!" />
+    </m:Page>
+</mvc:View>

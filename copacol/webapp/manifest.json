@@ -105,6 +105,15 @@
       "viewName": "copacol.view.App",
       "type": "XML",
       "id": "App"
+    },
+		"config": {
+			"sample": {
+				"files": [
+					"copacol.controller.Z_COPACOL",
+					"style.css",
+					"manifest.json"
+				]
+			}  
     }
   }
 }

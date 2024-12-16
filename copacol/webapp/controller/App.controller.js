@@ -1,10 +1,12 @@
 sap.ui.define([
   "sap/ui/core/mvc/Controller"
-], (Controller) => {
+], function (Controller) {
   "use strict";
 
-  return Controller.extend("copacol.controller.Z_COPACOL", {
-      onInit() {
+  return Controller.extend("copacol.controller.Admissao", {
+      onNavBack: function () {
+          const oRouter = sap.ui.core.UIComponent.getRouterFor(this);
+          oRouter.navTo("main");
       }
   });
 });
