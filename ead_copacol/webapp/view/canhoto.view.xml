@@ -1,7 +1,0 @@
-<mvc:View controllerName="eadcopacol.controller.canhoto"
-    xmlns:mvc="sap.ui.core.mvc"
-    xmlns:m="sap.m">
-    <m:Page id="canhotosPage" title="APP Canhotos" backgroundDesign="Solid">
-        <m:Label text="Bem-vindo ao APP Canhotos!" />
-    </m:Page>
-</mvc:View>
