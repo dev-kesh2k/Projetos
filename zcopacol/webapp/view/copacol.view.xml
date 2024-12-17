@@ -1,15 +1,21 @@
 <mvc:View controllerName="zcopacol.controller.copacol"
     xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns:f="sap.f"
+    xmlns:mdct="sap.ui.mdc.table"
+	xmlns:vm="sap.ui.fl.variants"
+    xmlns:upload="sap.m.upload"
+    xmlns:mdc="sap.ui.mdc"
     xmlns:custom="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1"
     height="100%"
     xmlns="sap.m">
     <SplitApp
-        id="SplitAppDemo"
-        initialDetail="detail"
+        id="EAD_Copacol"
+        initialDetail="Tutoriais"
         initialMaster="master">
         <detailPages>
             <Page
-                id="detail"
+                id="Tutoriais"
                 title="Copacol"
                 backgroundDesign="Solid">
                 <Label text="Tutoriais copacol" />
@@ -33,26 +39,75 @@
             </Page>
             <Page
                 id="detail2"
-                title="Detail 3 Page"
+                title="Documentos"
                 backgroundDesign="Solid"
                 showNavButton="true"
                 navButtonPress=".onPressDetailBack">
-                <Label text="This is Detail Page3" />
-                <Input/>
-                <Label text="Label 2" />
-                <Input/>
-                <Label text="Label 3" />
-                <Input/>
-                <Label text="Label 4" />
-                <Input/>
-                <Label text="Label 5" />
-                <Input/>
+                <upload:UploadSet
+                        id="UploadSet"
+                        instantUpload="true"
+                        showIcons="true"
+                        uploadEnabled="true"
+                        terminationEnabled="true"
+                        fileTypes="txt,doc,png"
+                        maxFileNameLength="30"
+                        maxFileSize="200"
+                        mediaTypes="text/plain,application/msword,image/png"
+                        uploadUrl="../../../../upload"
+                        items="{path: '/items', templateShareable: false}"
+                        mode="MultiSelect"
+                        selectionChanged="onSelectionChange"
+                        afterItemRemoved="onAfterItemRemoved">
+                    <upload:toolbar>
+                        <OverflowToolbar>
+                            <ToolbarSpacer/>
+                            <Button
+                                    id="uploadSelectedButton"
+                                    text="Upload selected"
+                                    press="onUploadSelectedButton"/>
+                            <Button
+                                    id="downloadSelectedButton"
+                                    text="Download selected"
+                                    press="onDownloadSelectedButton"/>
+                            <Button
+                                    id="versionButton"
+                                    enabled="false"
+                                    text="Upload a new version"
+                                    press="onVersionUpload"/>
+                            <upload:UploadSetToolbarPlaceholder />
+                        </OverflowToolbar>
+                    </upload:toolbar>
+                    <upload:items>
+                        <upload:UploadSetItem
+                                fileName="{fileName}"
+                                mediaType="{mediaType}"
+                                url="{url}"
+                                thumbnailUrl="{thumbnailUrl}"
+                                markers="{path: 'markers', templateShareable: false}"
+                                statuses="{path: 'statuses', templateShareable: false}"
+                                uploadState="{uploadState}">
+                            <upload:markers>
+                                <ObjectMarker
+                                        type="{type}"
+                                        visibility="{visibility}"/>
+                            </upload:markers>
+                            <upload:statuses>
+                                <ObjectStatus
+                                        title="{title}"
+                                        text="{text}"
+                                        state="{state}"
+                                        icon="{icon}"
+                                        active="{active}"/>
+                            </upload:statuses>
+                        </upload:UploadSetItem>
+                    </upload:items>
+                </upload:UploadSet>
             </Page>
         </detailPages>
         <masterPages>
             <Page
                 id="master"
-                title="Master 1"
+                title="Tutoriais"
                 backgroundDesign="List">
                 <List>
                     <StandardListItem title="Admissão Eletrônica" type="Navigation" press=".onPressGoToDetail3" />

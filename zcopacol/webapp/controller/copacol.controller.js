@@ -57,7 +57,7 @@ sap.ui.define([
 		},
 
 		getSplitAppObj: function () {
-			var result = this.byId("SplitAppDemo");
+			var result = this.byId("EAD_Copacol");
 			if (!result) {
 				Log.info("SplitApp object can't be found");
 			}
