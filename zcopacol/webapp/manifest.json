@@ -71,6 +71,7 @@
                 "path": "zcopacol.view",
                 "async": true,
                 "viewPath": "zcopacol.view"
+                
             },
             "routes": [
                 {

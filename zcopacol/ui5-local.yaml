@@ -24,7 +24,7 @@ server:
       afterMiddleware: fiori-tools-appreload
       configuration:
         component: zcopacol
-        ui5Theme: sap_horizon
+        ui5Theme: sap_belize
     - name: fiori-tools-proxy
       afterMiddleware: compression
       configuration:

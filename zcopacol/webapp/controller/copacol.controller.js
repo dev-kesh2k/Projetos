@@ -53,6 +53,10 @@ sap.ui.define([
 
 		// Nova função para ir diretamente à página Detail 3 Page (detail2)
 		onPressGoToDetail3: function () {
+			this.getSplitAppObj().toDetail(this.createId("detail1"));
+		},
+
+		onPressGoToDetail4: function () {
 			this.getSplitAppObj().toDetail(this.createId("detail2"));
 		},
 

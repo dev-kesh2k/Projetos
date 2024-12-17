@@ -38,7 +38,7 @@
                 </VBox>
             </Page>
             <Page
-                id="detail2"
+                id="detail1"
                 title="Documentos"
                 backgroundDesign="Solid"
                 showNavButton="true"
@@ -102,8 +102,9 @@
                         </upload:UploadSetItem>
                     </upload:items>
                 </upload:UploadSet>
+                
             </Page>
-        </detailPages>
+        </detailPages>   
         <masterPages>
             <Page
                 id="master"
@@ -111,6 +112,7 @@
                 backgroundDesign="List">
                 <List>
                     <StandardListItem title="Admissão Eletrônica" type="Navigation" press=".onPressGoToDetail3" />
+                    <StandardListItem title="APP Canhotos" type="Navigation" press=".onPressGoToDetail4" />
                 </List>
             </Page>
         </masterPages>

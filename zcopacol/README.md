@@ -11,7 +11,7 @@
 |**Module Name**<br>zcopacol|
 |**Application Title**<br>App Title|
 |**Namespace**<br>|
-|**UI5 Theme**<br>sap_horizon|
+|**UI5 Theme**<br>sap_belize|
 |**UI5 Version**<br>1.131.1|
 |**Enable Code Assist Libraries**<br>False|
 |**Enable TypeScript**<br>False|
