@@ -9,7 +9,7 @@ sap.ui.define([
 
 	return Controller.extend("sap.m.sample.UploadSet.Page", {
 		onInit: function () {
-			var sPath = sap.ui.require.toUrl("sap/m/sample/UploadSet/items.json"),
+			var sPath = sap.ui.require.toUrl("sap/m/sample/UploadSet/items.jsonn"),
 				oUploadSet = this.byId("UploadSet");
 
 			this.getView().setModel(new JSONModel(sPath));
